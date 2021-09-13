@@ -1,0 +1,38 @@
+.info-container{
+  background: white;
+  width: 100%;
+  display: flex;
+  margin-right: 128px;
+}
+.info-container img{
+  margin-right: 128px;
+  max-width: 510px;
+}
+.info-container div{
+  margin: 81px 82px 81px 144px;
+}
+.info-container div h1{
+  font-weight: 900;
+  font-size: 43px;
+  line-height: 54px;
+  margin-top: 0px;
+  color: #222F33;
+}
+.info-container div p{
+  font-size: 20px;
+  font-weight: 0;
+  line-height: 37px;
+  color: #646D70;
+}
+
+.info-container div button{
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+  color: #606B74;
+  margin-top: 78px;
+  background: transparent;
+  padding: 14px 20px;
+  border: #606B74 solid 2px;
+  border-radius: 8px;
+}

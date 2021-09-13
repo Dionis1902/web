@@ -1,0 +1,31 @@
+footer{
+  display: flex;
+  padding: 47px 72px;
+  color: #FFFFFF;
+}
+footer>*{
+  flex: auto;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+footer p, footer a{
+  mix-blend-mode: normal;
+  margin: 13px 0px 0px 0px;
+  opacity: 0.6;
+}
+
+footer div{
+  display: flex;
+  justify-content: flex-end;
+}
+footer a{
+  text-decoration: none;
+  color: #FFFFFF;
+  margin-left: 43px;
+}
+
+footer img{
+  height: 37px;
+}
