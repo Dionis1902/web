@@ -1,0 +1,84 @@
+header {
+  max-width: 1000px;
+  height: 600px;
+  background-image: url("../images/background_header.svg");
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  line-height: 14px;
+  font-size: 12px;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  list-style: none;
+  padding-inline-start: 0px;
+}
+
+header li {
+  margin-left: 40px;
+}
+
+.header-info {
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10%;
+}
+
+.text-header {
+  max-width: 420px;
+  padding-top: 17%;
+}
+
+.sus-tiny-houses {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.eco-tiny-houses {
+  font-family: Merriweather, sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 38px;
+  padding-top: 12px;
+}
+
+.movie-watch {
+  display: flex;
+  width: 250px;
+  height: 100px;
+  padding-top: 175px;
+}
+
+.play-button,
+.movie-watch > span {
+  cursor: pointer;
+}
+
+.movie-watch > img {
+  width: 75px;
+  height: 75px;
+}
+
+.movie-watch > span {
+  padding-top: 30px;
+}
+
+@media (max-width: 740px) {
+  .header-info {
+    flex-direction: column;
+  }
+
+  .movie-watch {
+    padding-top: 5%;
+  }
+
+  .eco-tiny-houses {
+    padding-right: 5%;
+  }
+}

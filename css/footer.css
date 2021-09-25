@@ -1,0 +1,54 @@
+footer {
+  max-width: 1000px;
+  background-color: #222f33;
+  height: 88px;
+}
+
+footer a {
+  opacity: 0.6;
+  font-size: 12px;
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.email {
+  float: left;
+}
+
+.footer-logo {
+  float: left;
+  padding-left: 60%;
+}
+
+.cookies {
+  display: inline-flex;
+  padding-left: 10%;
+}
+
+.privacybeleid {
+  display: inline-flex;
+  float: right;
+}
+
+@media (max-width: 600px) {
+  .footer-info {
+    flex-direction: column;
+  }
+
+  .footer-logo {
+    display: none;
+  }
+
+  .cookies {
+    padding-left: 0;
+  }
+}

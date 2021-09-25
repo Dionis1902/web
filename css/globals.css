@@ -1,0 +1,38 @@
+body {
+	max-width: 1000px;
+	margin: auto;
+	background: #FFFFFF;
+	font-family: 'Rubik', sans-serif;
+	font-size: 14px;
+	color: white;
+}
+
+body a {
+	cursor: pointer;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+}
+
+.default-button {
+	display: block;
+	width: 90px;
+	height: 34px;
+  	background-color: #FFFFFF;
+  	color: #606B74;
+  	text-align: center;
+  	line-height: 2.75;
+  	text-decoration: none;
+  	cursor: pointer;
+	border-radius: 4px;
+    border: none;
+}
+
+.default-button:hover {
+  	background-color: #606B74;
+  	color: #FFFFFF !important;
+}
+
+.fixed-position {
+    overflow: hidden;
+ }
