@@ -1,95 +1,176 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAB 6</title>
-    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>EcoBusiness</title>
   </head>
   <body>
     <header>
-      <nav class="container">
-        <img class="logo" src="images/logo.svg" alt="">
-        <ul>
-          <li><a href="#">Modellen</a></li>
-          <li><a href="#">Kopen</a></li>
-          <li><a href="#">Huren</a></li>
-          <li><a href="#">Nieuws</a></li>
-          <li><button type="button" name="button">Contact</button></li>
-        </ul>
-      </nav>
-      <div class="header-container">
-        <div>
-          <h3>Sustainable tiny houses</h3>
-          <h1>An ecological tiny house is constructed from as much sustainable natural materials as possible </h1>
+      <div class="top-bar">
+        <div class="menu-btn">
+          <div class="menu-btn__burger"></div>
         </div>
-        <div class="watсh-button">
-          <button type="button" name="button">
-            <img src="images/Shape.svg">
-          </button>
-          <p>Watch the movie</p>
+        <a href="#">
+          <img src="images/logo.svg" alt="EcoCabins" class="top-logo" />
+        </a>
+        <nav class="nav">
+          <ul>
+            <li><a href="#">Modellen</a></li>
+            <li><a href="#">Kopen</a></li>
+            <li><a href="#">Huren</a></li>
+            <li><a href="#">Nieuws</a></li>
+            <li><a href="#" class="default-button contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-info">
+        <div class="text-header">
+          <div class="sus-tiny-houses">Sustainable tiny houses</div>
+          <div class="eco-tiny-houses">
+            An ecological tiny house is constructed from as much sustainable
+            natural materials as possible
+          </div>
+        </div>
+        <div class="movie-watch">
+          <img src="images/play.svg" alt="Play button" class="play-button" />
+          <span>Watch the movie</span>
         </div>
       </div>
     </header>
-    <div class="content">
-      <div class="info-container">
-        <div>
-          <h1>Durable materials</h1>
-          <p>All EcoCabins have a high insulation value, are produced with sustainable and / or natural materials where possible and have the "round corners" as a striking external characteristic, made possible by the specific use of materials. The advantages of building with wood are many: wood is light, flexible, insulates well and builds quickly and efficiently.</p>
-          <button type="button" name="button">Read more</button>
+
+    <container class="materials">
+      <div class="materials-info">
+        <div class="intro">
+          <div class="intro-header">Durable materials</div>
+          <div class="intro-text">
+            All EcoCabins have a high insulation value, are produced with
+            sustainable and / or natural materials where possible and have the
+            "round corners" as a striking external characteristic, made possible
+            by the specific use of materials. The advantages of building with
+            wood are many: wood is light, flexible, insulates well and builds
+            quickly and efficiently.
+          </div>
+          <div class="read-more">
+            <a href="#" class="default-button">Read more</a>
+          </div>
         </div>
-        <img src="images/info.png">
-      </div>
-      <div class="innovative-container">
-        <div>
-          <h1>Innovative</h1>
-          <div class="info">
-            <p>Our goal is to continuously further develop and innovate the EcoCabins, so that the EcoCabins are ultimately 100% sustainable and circular. A condition for this is that the EcoCabins remain affordable. With the help of the sun, the wind and the best insulation you can enjoy.</p>
-            <p>All EcoCabins have a high insulation value, are produced with sustainable and / or natural materials where possible and have the 'round corners' as a striking external characteristic, made possible by the specific use of materials. The advantages of building.</p>
+        <div class="img">
+          <div class="materials-img">
+            <img src="images/material.svg" alt="Materials" />
           </div>
         </div>
       </div>
-      <div class="additional-info-container">
-        <img src="images/house.png">
-        <div class="data">
-          <div class="l-data">
-            <div>
-              <h1>Wood</h1>
-              <p>De draagconstructies van EcoCabins bestaan uit hout. Hout is duurzaam en.</p>
+    </container>
+
+    <container class="about">
+      <div class="about-info">
+        <div class="about-header">Innovative</div>
+        <div class="about-text">
+          <div>
+            Our goal is to continuously further develop and innovate the
+            EcoCabins, so that the EcoCabins are ultimately 100% sustainable and
+            circular. A condition for this is that the EcoCabins remain
+            affordable. With the help of the sun, the wind and the best
+            insulation you can enjoy.
+          </div>
+          <div>
+            All EcoCabins have a high insulation value, are produced with
+            sustainable and / or natural materials where possible and have the
+            'round corners' as a striking external characteristic, made possible
+            by the specific use of materials. The advantages of building.
+          </div>
+        </div>
+      </div>
+    </container>
+
+    <container class="usp">
+      <div class="usp-info">
+        <img src="images/usp.svg" alt="house" class="usp-img" />
+        <div class="article">
+          <div class="row-article">
+            <div class="article-block">
+              <span class="title-usp">Wood</span>
+              <div>
+                <span class="text-usp"
+                  >De draagconstructies van EcoCabins bestaan uit hout. Hout is
+                  duurzaam en.</span
+                >
+              </div>
             </div>
-            <div>
-              <h1>Workmanship</h1>
-              <p>De draagconstructies van EcoCabins bestaan uit hout. Hout is duurzaam en.</p>
-            </div>
-            <div>
-              <h1>Steel base</h1>
-              <p>Het stalen onderstel is sterk zijn en heeft de benodigde stijfheid die.</p>
+            <div class="article-block">
+              <span class="title-usp">Glass wool</span>
+              <div>
+                <span class="text-usp"
+                  >De combinatie van glaswol met een houtskelet constructie
+                  geeft een.</span
+                >
+              </div>
             </div>
           </div>
-          <div class="r-data">
-            <div>
-              <h1>Glass wool</h1>
-              <p>De combinatie van glaswol met een houtskelet constructie geeft een.</p>
+          <div class="row-article">
+            <div class="article-block">
+              <span class="title-usp">Workmanship</span>
+              <div>
+                <span class="text-usp"
+                  >De draagconstructies van EcoCabins bestaan uit hout. Hout is
+                  duurzaam en.</span
+                >
+              </div>
             </div>
-            <div>
-              <h1>Triple glass</h1>
-              <p>De combinatie van glaswol met een houtskelet constructie geeft een.</p>
+            <div class="article-block">
+              <span class="title-usp">Triple glass</span>
+              <div>
+                <span class="text-usp"
+                  >De combinatie van glaswol met een houtskelet constructie
+                  geeft een.</span
+                >
+              </div>
             </div>
-            <div>
-              <h1>Infrared floor</h1>
-              <p>De vloer wordt opgewarmd middels opgewekte warmte uit eigen zonne-energie.</p>
+          </div>
+          <div class="row-article">
+            <div class="article-block">
+              <span class="title-usp">Steel base</span>
+              <div>
+                <span class="text-usp"
+                  >Het stalen onderstel is sterk zijn en heeft de benodigde
+                  stijfheid die</span
+                >
+              </div>
+            </div>
+            <div class="article-block">
+              <span class="title-usp">Infrared floor</span>
+              <div>
+                <span class="text-usp"
+                  >De vloer wordt opgewarmd middels opgewekte warmte uit eigen
+                  zonne-energie.</span
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <footer>
-        <p>info@eco-cabins.com</p>
-        <img src="images/logo.svg">
-        <div>
+    </container>
+
+    <footer>
+      <div class="footer-info">
+        <a href="#" class="email">info@eco-cabins.com</a>
+        <a href="#">
+          <img src="images/logo.svg" alt="EcoCabins" class="footer-logo" />
+        </a>
+        <div class="cookies">
           <a href="#">Cookies</a>
+        </div>
+        <div class="privacybeleid">
           <a href="#">Privacybeleid</a>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
   </body>
 </html>
