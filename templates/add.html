@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/add.css')}}">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>My Zoo</h1>
+                <a href="/">My Animals</a>
+                <a href="/add">Add Animal</a>
+            </div>
+            <div></div>
+        </nav>
+    </header>
+    <div class="form_content">
+        <form method="post">
+            <h1>{{ title }}</h1>
+            <label for="title">Title</label><br>
+            <input type="text" id="title" name="title" value="{{ name }}" required><br>
+            <label for="description">Description</label><br>
+            <textarea id="description" name="description" required>{{ description }}</textarea><br>
+            <label for="price">Daily expense ($)</label><br>
+            <input type="number" id="price" name="price" min="1" max="1000" value="{{ price }}" required><br>
+            <label for="type">Type</label><br>
+            <select name="type" id="type" required>
+                <option value="" selected disabled hidden>Choose here</option>
+                <option value="mammal" {% if type=='mammal' %} selected="selected"{% endif %}>Mammal</option>
+                <option value="reptile" {% if type=='reptile' %} selected="selected"{% endif %}>Reptile</option>
+                <option value="fish" {% if type=='fish' %} selected="selected"{% endif %}>Fish</option>
+                <option value="birds" {% if type=='birds' %} selected="selected"{% endif %}>Birds</option>
+            </select><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

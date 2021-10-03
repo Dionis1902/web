@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <title>My Animals</title>
+</head>
+
+<body>
+<header>
+    <nav>
+        <div>
+            <h1>My Zoo</h1>
+            <a href="/">My Animals</a>
+            <a href="/add">Add Animal</a>
+        </div>
+        <div>
+            <input type="search" id="searchText" placeholder="Type something...">
+            <button id="search">Search</button>
+        </div>
+    </nav>
+</header>
+<div class="content">
+    <div class="left">
+        <div>
+            <h3>Manage Animals</h3>
+            <div class="choose">
+                <p>Sort by price</p>
+                <label class="switch">
+                    <input type="checkbox" id="sort">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+        </div>
+        <p>Total expense : <b id="price">0</b><b>$</b></p>
+    </div>
+    <div class="right" id="content"></div>
+</div>
+</body>
+
+</html>
