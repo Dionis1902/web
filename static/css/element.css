@@ -1,0 +1,50 @@
+.element {
+    width: 30%;
+    border: #17252A solid 2px;
+    border-radius: 8px;
+    padding: 5px;
+    flex: 0 0;
+    margin-right: 7px;
+    height: 500px;
+    margin-bottom: 7px;
+    display: flex;
+    flex-direction: column;
+}
+
+.element img {
+    border-radius: 8px;
+    height: 218px;
+}
+
+.element p {
+    flex-grow: 1;
+    margin: 0px;
+}
+
+.element button {
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 4px 15px;
+    cursor: pointer;
+    border: solid 1px;
+    color: #FEFFFF;
+}
+
+.element .delete {
+    background: #ff686b;
+    border-color: #ff686b;
+}
+
+.element .edit {
+    background: #068d9d;
+    border-color: #068d9d;
+    margin-left: 5px;
+}
+
+.element h3 {
+    margin: 5px 0px;
+}
+
+.element h1 {
+    margin: 5px 0px;
+}
