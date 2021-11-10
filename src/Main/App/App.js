@@ -2,6 +2,8 @@ import Navbar from "../Header/Navbar";
 import Footer from "../Footer/Footer";
 import Home from "../Home/Home";
 import Catalog from "../Catalog/Catalog";
+import ItemPage from "../ItemPage/IteamPage";
+import Context from "../context";
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 function App() {
@@ -80,16 +82,22 @@ function App() {
         }
     ]
 
+    function getData(id) {
+        return data.filter((element) => element.id == id)[0]
+    }
 
     return (
-        <Router>
-            <Navbar activate={0}/>
-            <Routes>
-                <Route path="/" element={<Home data={data}/>}/>
-                <Route path="/catalog" element={<Catalog data={data}/>}/>
-            </Routes>
-            <Footer/>
-        </Router>
+        <Context.Provider value={{getData}}>
+            <Router>
+                <Navbar activate={0}/>
+                <Routes>
+                    <Route path="/" element={<Home data={data}/>}/>
+                    <Route path="/catalog" element={<Catalog data={data}/>}/>
+                    <Route path="/catalog/:id" element={<ItemPage />}/>
+                </Routes>
+                <Footer/>
+            </Router>
+        </Context.Provider>
     );
 }
 

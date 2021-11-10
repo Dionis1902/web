@@ -7,7 +7,7 @@ function Item({element, catalog=false}){
             <h3>{element.title}</h3>
             { catalog? <h5>{element.price} $</h5>: null }
             <p>{element.text}</p>
-            { catalog? <button type="button" className="btn btn-outline-secondary mb-5 mt-auto">View more</button> : null }
+            { catalog? <a type="button" href={`catalog/${element.id}`} className="btn btn-outline-secondary mb-5 mt-auto">View more</a> : null }
         </div>
     );
 }
