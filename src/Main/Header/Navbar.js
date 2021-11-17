@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useContext, useState} from "react";
 import {NavLink} from "react-router-dom";
+import Context from "../context";
+
 
 function Navbar() {
+    const {counter} = useContext(Context);
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="#">
@@ -17,7 +20,9 @@ function Navbar() {
                         <NavLink exact to="/catalog"  className="nav-link">Catalog</NavLink>
                     </li>
                     <li className="nav-item active">
-                        <NavLink exact to="/cart" className="nav-link">Cart</NavLink>
+                        <NavLink exact to="/cart" className="nav-link">Cart {
+                            counter>0?<span className="badge badge-pill badge-primary">{counter}</span>: null}
+                        </NavLink>
                     </li>
                 </ul>
                 <ul className="navbar-nav ml-auto">
