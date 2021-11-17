@@ -12,8 +12,9 @@ function CatalogItem({id, dispatch, count, setAnimalsCont}) {
     const [endPrice, setEndPrice] = useState(element.price * count)
 
     function changeCount(e){
-        setEndPrice(element.price * parseInt(e.target.value))
-        dispatch(setItemCount(id, parseInt(e.target.value)))
+        let number = e.target.value? parseInt(e.target.value): 1
+        setEndPrice(element.price * number)
+        dispatch(setItemCount(id, number))
         setAnimalsCont()
 
     }
@@ -22,10 +23,10 @@ function CatalogItem({id, dispatch, count, setAnimalsCont}) {
         <tr>
             <td style={{verticalAlign: "inherit"}}>{element.title}</td>
             <td style={{verticalAlign: "inherit"}} className="text-center">{element.type.capitalize()}</td>
-            <td style={{verticalAlign: "inherit"}} className="text-center"><input style={{textAlign: "center"}} type="number" min="0" max="99" defaultValue={count} onChange={(e)=> changeCount(e)} className="form-control" />
+            <td style={{verticalAlign: "inherit"}} className="text-center"><input style={{textAlign: "center"}} type="number" min="1" max="99" defaultValue={count} onChange={(e)=> changeCount(e)} className="form-control" />
             </td>
             <td style={{verticalAlign: "inherit"}} className="text-center">{element.price.toFixed(2)} $</td>
-            <td style={{verticalAlign: "inherit"}} className="text-center">{(endPrice).toFixed(2)} $</td>
+            <td style={{verticalAlign: "inherit"}} className="text-center">{endPrice.toFixed(2)} $</td>
             <td style={{verticalAlign: "inherit"}} className="text-center"><button onClick={() => {
                 dispatch(setItemCount(id, 0))
                 setAnimalsCont()

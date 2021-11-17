@@ -12,6 +12,7 @@ import Loader from "../Loader";
 import Cart from "../Cart/Cart";
 import {useSelector} from "react-redux";
 
+
 function App() {
     let [data, setData] = useState([]);
     let [loader, setLoader] = useState(true);
@@ -31,15 +32,14 @@ function App() {
     }
 
     return (
-        <Context.Provider value={{getData, counter, setCounter}}>
+        <Context.Provider value={{getData, counter, setCounter, db}}>
             <Router>
                 <Navbar/>
-
                 <Routes>
                     <Route path="/" element={<Home data={ data }/>}/>
-                    <Route path="/catalog" element={<Catalog data={ data }/>}/>
+                    <Route path="/catalog" element={!loader && <Catalog data={ data }/>}/>
                     <Route path="/catalog/:id" element={ !loader && <ItemPage />}/>
-                    <Route path="/cart" element={ !loader && <Cart cart={ cart }/>}/>
+                    <Route path="/cart" element={ !loader && <Cart cart={ cart } />}/>
                 </Routes>
                 {loader && <Loader />}
                 <Footer/>

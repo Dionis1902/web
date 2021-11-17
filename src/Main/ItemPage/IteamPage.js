@@ -3,19 +3,15 @@ import {useParams} from "react-router-dom";
 import Context from "../context";
 import {useDispatch} from "react-redux";
 import {addItemToCart} from "../Reducers/Cart";
+import NoFound from "../NoFound";
+
 function ItemPage() {
     let {id} = useParams();
     const {getData, counter, setCounter} = useContext(Context);
     const element = getData(id);
     const dispatch = useDispatch();
-    if (!element) {
-        return (
-            <div className="d-flex flex-column justify-content-center text-center"
-                 style={{marginTop: "200px", marginBottom: "200px"}}>
-                <h1>404 - Animal don't founded</h1>
-
-            </div>)
-    }
+    if (!element)
+        return <NoFound error={"404"} text={"The page you requested was not found."}/>
     return (
 
         <div className="row mt-5 justify-content-center">
