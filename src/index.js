@@ -6,14 +6,23 @@ import {createStore} from "redux";
 import reducer from "./Main/Reducers/Cart";
 import {Provider} from "react-redux";
 
-const persistedState = localStorage.getItem('cart')
-                       ? JSON.parse(localStorage.getItem('cart'))
-                       : {cart : {}}
+let CryptoJS = require("crypto-js");
+
+
+const persistedState = {cart : {}}
+if (localStorage.getItem('cart'))
+    try{
+        JSON.parse(CryptoJS.AES.decrypt(localStorage.getItem('cart').toString(),"klndfgnuwie").toString(CryptoJS.enc.Utf8))
+    }catch(err){
+
+    }
+
+
 
 const store = createStore(reducer, persistedState);
 
 store.subscribe(()=>{
-  localStorage.setItem('cart', JSON.stringify(store.getState()))
+  localStorage.setItem('cart', CryptoJS.AES.encrypt(store.getState().toString(), "klndfgnuwie").toString())
 })
 
 ReactDOM.render(
