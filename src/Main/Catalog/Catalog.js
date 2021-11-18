@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useContext} from "react";
 import Filters from "./Filters";
 import Item from "../Home/Item";
 import NoFound from "../NoFound";
+
 
 function Catalog({data}) {
     const filter = {
@@ -13,6 +14,8 @@ function Catalog({data}) {
     const animals = data.sort((a, b) => {return filter.sort ? (filter.sort === 'asc' ? a.price - b.price : b.price-a.price ) : 0;})
                                 .filter((element) => element.type.includes(filter.animal))
                                 .filter((element) => element.title.toLowerCase().includes(filter.search.toLowerCase()) || element.text.toLowerCase().includes(filter.search.toLowerCase()))
+
+
 
     if (!animals.length)
         return <NoFound error={"???"} text={"Your filters did not return any results."}/>

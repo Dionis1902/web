@@ -6,7 +6,8 @@ import Context from "../context";
 import {doc, setDoc, getDocs, collection} from "firebase/firestore";
 import {useDispatch, useSelector} from "react-redux";
 import {setItemCount} from "../Reducers/Cart";
-
+import getInput from "../Input";
+import {auth} from '../firebase';
 
 function Form({setSuccess}) {
     const {db, getData} = useContext(Context);
@@ -38,10 +39,10 @@ function Form({setSuccess}) {
 
     async function pushData(data) {
         setSuccess('load')
-        const billsRef = collection(db, "bills")
-        const userRef = collection(doc(billsRef, data["email"]), "bills")
-        getDocs(userRef).then(docs => {
-            setDoc(doc(userRef, 'bill' + docs.size), {billingData: data, cart: cart, totalPrice:getSubtotal()}).then(() => {
+        const usersRef = collection(db, "users")
+        const billsRef = collection(doc(usersRef, auth.currentUser.uid), "bills")
+        getDocs(billsRef).then(docs => {
+            setDoc(doc(billsRef, 'bill' + docs.size), {billingData: data, cart: cart, totalPrice:getSubtotal()}).then(() => {
                     setSuccess(data['email'])
                     Object.keys(cart).map((id) => dispatch(setItemCount(id, 0)))
                 }
@@ -50,19 +51,6 @@ function Form({setSuccess}) {
 
 
 
-    }
-
-    function getInput(id, text, type, placeholder, handleChange, handleBlur, values, errors, touched) {
-        return (
-            <div>
-                <label htmlFor={id}>{text}</label>
-                <input type={type} onChange={handleChange} onBlur={handleBlur} value={values[id]}
-                       placeholder={placeholder}
-                       className={"form-control " + (touched[id] && errors[id] ? 'is-invalid' : touched[id] ? 'is-valid' : '')}
-                       id={id}/>
-                {touched[id] && errors[id] && <div className="invalid-feedback">{errors[id]}</div>}
-            </div>
-        );
     }
 
     return (

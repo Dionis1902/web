@@ -189,4 +189,4 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-src/Main/config.js
+src/Main/firebase.js

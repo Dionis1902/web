@@ -1,4 +1,5 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 
 function Item({element, catalog=false}){
     return (
@@ -7,7 +8,7 @@ function Item({element, catalog=false}){
             <h3>{element.title}</h3>
             { catalog? <h5>{element.price} $</h5>: null }
             <p>{element.text}</p>
-            { catalog? <a type="button" href={`catalog/${element.id}`} className="btn btn-outline-secondary mb-5 mt-auto">View more</a> : null }
+            { catalog? <NavLink type="button" to={`/catalog/${element.id}`} className="btn btn-outline-secondary mb-5 mt-auto">View more</NavLink> : null }
         </div>
     );
 }

@@ -1,6 +1,8 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import Item from "./Item";
 import Heading from "../Header/Heading";
+import Context from "../context";
+import Loader from "../Loader";
 
 function Home({data}) {
     const [count, setCount] = useState(3)
