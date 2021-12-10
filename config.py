@@ -86,4 +86,4 @@ TASKS = {
 }
 
 IGNORE = ['.gitignore', 'README.md', 'package-lock.json', 'package.json', 'reportWebVitals.js', 'node_modules']
-IGNORE_FORMAT = ['.jpeg', '.svg', '.png', '.jpg']
+IGNORE_FORMAT = ['.jpeg', '.svg', '.png', '.jpg', '.ico', '.DS_Store', '.txt', '.md', '.py', '.xml', '.iml', '.pyc']
